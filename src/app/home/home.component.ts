@@ -1,6 +1,5 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { from, interval, zip } from 'rxjs';
-import { ChatBotService } from '../chat-bot.service';
 
 
 @Component({
@@ -24,11 +23,16 @@ export class HomeComponent implements OnInit {
   showStep5: boolean = false;
   showStep6: boolean = false;
 
-  constructor(public chatBotService: ChatBotService,private changeDetector: ChangeDetectorRef) {
-    this.chatBotService.showChatBot = true;
+  constructor() {
+
   }
 
   ngOnInit(): void {
+    this.showStep2 = false;
+    this.showStep3 = false;
+    this.showStep4 = false;
+    this.showStep5 = false;
+    this.showStep6 = false;
     this.showStep1 = true;
     this.startStep1();
   }

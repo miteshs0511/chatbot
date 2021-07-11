@@ -1,11 +1,11 @@
 <div *ngIf="showStep1" class="bot-main h-100">
   <div class="card card-design">
     <div class="card-body p-0">
-      <div *ngIf="showStep2" class="step-2-animate top-part-design px-4 pt-3">
-        <div class="ps-4 step-3-animate">
-          <h5 class="card-title fw-bolder">IRIS</h5>
+      <div *ngIf="showStep2" class="step-2-animate top-part-design px-4 pt-5">
+        <div *ngIf="showStep3" class="ps-4 step-3-animate">
+          <h4 class="card-title fw-bolder">IRIS</h4>
           <div class="d-flex mt-2">
-            <h6 class="fw-bold mt-1">Hello</h6>
+            <h5 class="fw-bold mt-1">Hello</h5>
             <div class="ps-2">
               <img width="25" height="25" alt="Greetings" src="assets/icon/hand_wave_pro.svg">
             </div>
@@ -35,7 +35,7 @@
               <span class="question-color fw-bolder question-bg"> ? </span>
             </div>
             <div *ngIf="showStep5">
-            <div *ngFor="let list of asyncQuesList" class="step-5-animate default-list mt-2">
+            <div *ngFor="let list of asyncQuesList" class="step-5-animate default-list mt-3">
               <div class="p-2 pe-0 d-flex">
                 <div class="list-style-bg">
                   <div class="list-style"></div>
